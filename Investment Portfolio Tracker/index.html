@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Portfolio Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Investment Portfolio Tracker</h1>
+        <div class="portfolio-info">
+            <h2>Total Portfolio Value: $<span id="totalValue">0</span></h2>
+        </div>
+
+        <button id="addInvestmentBtn">Add New Investment</button>
+
+        <div id="investmentForm" class="form">
+            <h3>Add New Investment</h3>
+            <label for="assetName">Asset Name:</label>
+            <input type="text" id="assetName" required>
+            
+            <label for="investedAmount">Amount Invested:</label>
+            <input type="number" id="investedAmount" required>
+
+            <label for="currentValue">Current Value:</label>
+            <input type="number" id="currentValue" required>
+
+            <button id="addBtn">Add Investment</button>
+        </div>
+
+        <div id="updateForm" class="form" style="display: none;">
+            <h3>Update Investment</h3>
+            <label for="updateAssetName">Asset Name:</label>
+            <input type="text" id="updateAssetName" disabled>
+            
+            <label for="updateInvestedAmount">Amount Invested:</label>
+            <input type="number" id="updateInvestedAmount" disabled>
+
+            <label for="updateCurrentValue">Current Value:</label>
+            <input type="number" id="updateCurrentValue" required>
+
+            <button id="updateBtn">Update Investment</button>
+        </div>
+
+        <div id="investmentList">
+            <h3>Investment List:</h3>
+            <ul id="list"></ul>
+        </div>
+
+        <canvas id="pieChart"></canvas>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
